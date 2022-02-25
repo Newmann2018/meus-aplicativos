@@ -1,112 +1,69 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
+import React  from "react";
+import{
   View,
-} from 'react-native';
+  Text,
+  StyleSheet,
+  TextImput,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity
+}from 'react-native';
+import { useState } from 'react';
+import{Ionicons} from "@expo/vector-icons";
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+export default function App(){
+  return(
+    <SafeAreaView style = {style.conteiner}>
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+      <StatusBar backgroundColor ='171d31' barStyle='light-content'>
+        
+        <View style ={Style.content} >
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <Text style = {style.Text}>tarefas</Text>
+        
         </View>
-      </ScrollView>
+
+
+        <TouchableOpacity style = {style.fab}>
+          
+          <Ionicons name='ios-add' size ='{35}'color ='#fff'/>
+        
+        </TouchableOpacity>
+
+      </StatusBar>
+
     </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  )
+}
+const Style = StyleSheet.create({
+  conteiner:{
+    flex:1,
+    backgroundColor: '#171d31'
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  title:{
+    marginTop:10,
+    paddingBottom:10,
+    fontSize: 25,
+    textAlign:'center',
+    color:'#fff'
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+  fab:{
+    position:"absolute",
+    width: 60,
+    height: 60,
+    backgroundColor:'#0094FF',
+    alignItems: 'center',
+    justifyContent:'center',
+    borderRadius:30,
+    right:25,
+    bottom:25,
+    elevation:2,
+    zIndex:9,
+    shadowColor:'#000',
+    shadowOpacity:0.2,
+    shadowOffset:{
+      width: 1,
+      height: 3,
+    }
+  }
 });
-
-export default App;
