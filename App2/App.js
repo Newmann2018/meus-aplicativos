@@ -6,7 +6,8 @@ import{
   TextImput,
   SafeAreaView,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  Image,
 }from 'react-native';
 import { useState } from 'react';
 import{Ionicons} from "@expo/vector-icons";
@@ -22,10 +23,16 @@ export default function App(){
           <Text style = {style.Text}>tarefas</Text>
         
         </View>
+        <View>
+          <image Style = {Style.image}>
+            source ={require('./assets/imagens-surreais')}
+          </image>
+          
+        </View>
 
 
         <TouchableOpacity style = {style.fab}>
-          
+
           <Ionicons name='ios-add' size ='{35}'color ='#fff'/>
         
         </TouchableOpacity>
@@ -65,5 +72,12 @@ const Style = StyleSheet.create({
       width: 1,
       height: 3,
     }
+  },
+  image:{
+    flex: 1,
+    alignItems:'center',
+    justifyContent:'center',
+    width:12,
+    height:12,
   }
 });
