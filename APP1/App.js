@@ -8,7 +8,6 @@ import{
   StatusBar,
   TouchableOpacity
 }from 'react-native';
-import { useState } from 'react';
 import{Ionicons} from "@expo/vector-icons";
 
 export default function App(){
@@ -65,3 +64,4 @@ const Style = StyleSheet.create({
     }
   }
 });
+
