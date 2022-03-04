@@ -24,7 +24,7 @@ class app1 extends Comment{
           </View>
   
           <TouchableOpacity style = {style.fab}>
-            <Ionicons name='ios-add' size ='{35}'color ='#fff'/>
+            <Ionicons name='ios-add' size ='{35}'color ='#ffffff'/>
           
           </TouchableOpacity>
   
