@@ -37,14 +37,14 @@ class app1 extends Comment{
   const = Style = StyleSheet.create({
     conteiner:{
       flex:1,
-      backgroundColor: '#171d31'
+      backgroundColor: '#171d51'
     },
     title:{
       marginTop:10,
       paddingBottom:10,
       fontSize: 25,
       textAlign:'center',
-      color:'#fff'
+      color:'#ffffff'
     },
     fab:{
       position:"absolute",
@@ -58,7 +58,7 @@ class app1 extends Comment{
       bottom:25,
       elevation:2,
       zIndex:9,
-      shadowColor:'#000',
+      shadowColor:'#000000',
       shadowOpacity:0.2,
       shadowOffset:{
         width: 1,
