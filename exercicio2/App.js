@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -25,7 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}) =>{
+const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -51,7 +52,7 @@ const Section = ({children, title}) =>{
   );
 };
 
-const App = () => {
+const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -70,7 +71,8 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-                entrar
+            Edit <Text style={styles.highlight}>App.js</Text> to change this
+            screen and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
@@ -90,14 +92,11 @@ const App = () => {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    alignItems:"center",
-    justifyContent:"center",
     marginTop: 32,
     paddingHorizontal: 24,
-    backgroundColor:'#588556',
   },
   sectionTitle: {
-    fontSize: 30,
+    fontSize: 24,
     fontWeight: '600',
   },
   sectionDescription: {
