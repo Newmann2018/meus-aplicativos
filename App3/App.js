@@ -44,7 +44,7 @@ class app extends Comment{
       </SafeAreaView>
     )
   }
-  const = Style = StyleSheet.create({
+  const Style = StyleSheet.create({
     conteiner:{
       flex:1,
       backgroundColor: '#171d31'
