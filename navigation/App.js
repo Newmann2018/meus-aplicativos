@@ -1,20 +1,10 @@
 import  React from 'react';
-import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './src/pages/Home';
 import Sobre from './src/pages/Sobre';
 import Contato from './src/pages/Contato';
-
-function Home() {
-  return (
-    <View>
-      <Text> Home </Text>
-    </View>
-  );
-  
-}
 
 const Stack = createNativeStackNavigator();
 

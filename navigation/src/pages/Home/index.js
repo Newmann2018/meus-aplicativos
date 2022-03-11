@@ -12,7 +12,7 @@ export default function Home() {
     return(
         <View style={styleHome.container}>
             <image style={styleHome.logo}>
-                source={require('.../public/assets/img/logo do facebook')};
+                source={require('.../public/assets/image/logo do facebook')};
             </image>
 
             <TextInput
