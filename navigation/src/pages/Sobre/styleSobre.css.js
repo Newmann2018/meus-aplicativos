@@ -1,46 +1,89 @@
 const styleSobre = StyleSheet.create({
     container:{
-        flex: 1,
-        justifyContent:'center',
-        alignItems: 'center',
-        backgroundlineargradient:("#563A8F","#8F3A8D","#8F3A60"),
+     flex: 1,
+     flexDirection: 'column',
+     alignItems: 'center',
+     justifyContent: 'flex-start',
     },
-    logo:{
-        width: 150,
-        height:150,
-        borderRadius:4,
+
+    secondContainer:{
+     width: '100%',
+     height: 50,
+     flexDirection: 'row',
+     justifyContent: 'flex-end',
     },
-    imput:{
-        marginTop: 10,
-        padding:10 ,
-        width:300,
-        backgroundColor:'#fff',
-        fontSize:16,
-        fontwidth:"bold",
-        borderRadius:3,
+
+    littleContainer:{
+     width: 50,
+     height: 50,
+     backgroundColor: 'pink',
     },
-    button:{
-        width:300,
-        height:40,
-        backgroundColor:"#0E0739",
-        marginTop:10,
-        borderRadius:4,
-        alignItems:"center",
-        justifyContent:"center",
+
+    input:{
+     width: "85%",
+     height: 60,
+     borderColor: "#C0C0C0",
+     borderWidth: 1,
+     borderRadius: 10,
+     fontSize: 20,
     },
-    textButton:{
-        fontSize:16,
-        fontwidth:"bold",
-        color:"#fff"
+
+    buttonOne:{
+     width: "85%",
+     height: 45,
+     backgroundColor: '#fff',
+     alignItems: 'center',
+     justifyContent: 'center',
+     borderColor: "#A9A9A9",
+     borderWidth: 1,
     },
-    Text:{
-        alignItems:"center",
-        justifyContent:"center",
-        backgroundColor:"#fff",
-        fontSize: 15,
-        paddingtop:10,
-        paddingbutton:10,
+
+    buttonTwo:{
+      width: "85%",
+      height: 45,
+      backgroundColor: "#7F2750",
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderColor: "#C71585",
+      borderWidth: 1,
+     },
+
+    buttonNone:{
+       width: 35,
+       height: 35,
+       backgroundColor: '#7F2750',
+       borderRadius:50,
+       alignItems: 'center',
+       justifyContent: 'center',
+       borderColor: "#C71585",
+       borderWidth: 1,
+       marginTop: 15,
+     },
+
+     textButtonColor:{
+      color: '#fff',
+     },
+
+    text: {
+     fontSize: 14,
+    },
+
+    margin: {
+     marginRight: 25,
+    },
+
+    marginTop:{
+      marginTop: 12,
+    },
+
+    textSize:{
+      width: '80%',
+      textAlign: 'center',
+    },
+
+    textPosition:{
+      marginLeft: '65%',
     }
-});
 
 
+  });

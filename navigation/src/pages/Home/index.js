@@ -1,36 +1,36 @@
-import React from "react";
-import {
-     View,
-     Text,
-     image,
-     TextInput,
-     TouchableOpacity 
-} from "react-native";
-
-import styleHome from "./styleHome.css"
-export default function Home() {
+import React from 'react';
+import {SafeAreaView,
+        View,
+        Text,
+        StyleSheet,
+        TextInput,
+        StatusBar,
+        TouchableOpacity} from 'react-native';
+ import styleHome from "./styleHome.css"
+function Facebook({navigation}){
     return(
-        <View style={styleHome.container}>
-            <image style={styleHome.logo}>
-                source={require('.../public/assets/image/logo do facebook')};
-            </image>
-
-            <TextInput
-            style={styleHome.imput}
-                placeholder ="digite seu Email"
-            />
-
-            <TextInput
-            style={styleHome.imput}
-                secureTextEntry={true}
-                placeholder ="digite sua senha"
-            />
-
-            <TouchableOpacity
-            onPress = { () => navigation.navigate('Sobre')}
-            style={styleHome.button}>
-                <Text style={styleHome.textButton}>Login</Text>
-            </TouchableOpacity>
+      <SafeAreaView style = {{flex:1}}>
+        <StatusBar hidden />
+        <View style = {[styleHome.container]}>
+          <Text style = {[styleHome.title]} >facebook</Text>
+          <TextInput
+            style={[styleHome.input]}
+            placeholder='     email or phone'
+            clearButtonMode='always'/>
+          <TextInput
+            style={[styleHome.input]}
+            placeholder='     password'
+            secureTextEntry={true}
+            clearButtonMode='always'/>
+          <TouchableOpacity
+            style={[styleHome.button]}
+            onPress = { () =>
+             navigation.navigate('Login')}>
+           <Text style={[styleHome.textButton]}>Log in</Text>
+          </TouchableOpacity>
+          <Text style={[styles.finalText]}>sign up for facebook</Text>
         </View>
-    );    
+      </SafeAreaView>
+    );
 }
+export default Facebook;
