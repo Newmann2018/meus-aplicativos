@@ -7,8 +7,9 @@ TouchableOpacity
 
 import LinearGradient from 'react-native-linear-gradient';
 import styleSobre from "./styleSobre.css"
-function Home({navigation}){
+function Sobre({navigation}){
 return(
+  
 <SafeAreaView style = {{flex:1}}>
 <StatusBar hidden />
 <View style = {{flex:1}}>
